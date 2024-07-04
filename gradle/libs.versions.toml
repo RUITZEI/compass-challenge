@@ -1,0 +1,95 @@
+[versions]
+agp = "8.3.2"
+kotlin = "1.9.23"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.8.2"
+activityCompose = "1.9.0"
+composeBom = "2024.06.00"
+ktor-version = "2.3.0"
+jetbrains-serialization = "1.6.0"
+hilt = "2.50"
+room = "2.6.1"
+nav_version = "2.7.7"
+hilt_navigation = "1.2.0"
+lifecycleRuntimeComposeAndroid = "2.8.2"
+coroutines_test_version = "1.8.1"
+mockito_version = "5.3.1"
+core_testing_version = "2.2.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+ktor-client-android = { group = 'io.ktor', name = 'ktor-client-android', version.ref = 'ktor-version' }
+ktor-client-core = { group = 'io.ktor', name = 'ktor-client-core', version.ref = 'ktor-version' }
+ktor-client-cio = { group = 'io.ktor', name = 'ktor-client-cio', version.ref = 'ktor-version' }
+ktor-client-logging = { group = 'io.ktor', name = 'ktor-client-logging', version.ref = 'ktor-version' }
+ktor-client-content-negotiation = { group = 'io.ktor', name = 'ktor-client-content-negotiation', version.ref = 'ktor-version' }
+ktor-serialization-kotlinx = { group = 'io.ktor', name = 'ktor-serialization-kotlinx-json', version.ref = 'ktor-version' }
+ktor-client-serialization = { group = 'io.ktor', name = 'ktor-client-serialization', version.ref = 'ktor-version' }
+ktor-client-auth = { group = 'io.ktor', name = 'ktor-client-auth', version.ref = 'ktor-version' }
+ktor-client-resources = { group = 'io.ktor', name = 'ktor-client-resources', version.ref = 'ktor-version' }
+
+jetbrains-kotlinx-serialization = { group = 'org.jetbrains.kotlinx', name = 'kotlinx-serialization-json', version.ref = 'jetbrains-serialization' }
+hilt = { group = 'com.google.dagger', name = 'hilt-android', version.ref = 'hilt' }
+hilt-kapt = { group = 'com.google.dagger', name = 'hilt-compiler', version.ref = 'hilt' }
+
+room-runtime = { group = 'androidx.room', name = 'room-runtime', version.ref = 'room' }
+room-compiler = { group = 'androidx.room', name = 'room-compiler', version.ref = 'room' }
+room-kapt = { group = 'androidx.room', name = 'room-compiler', version.ref = 'room' }
+room-ktx = { group = 'androidx.room', name = 'room-ktx', version.ref = 'room' }
+
+compose-navigation = { group = 'androidx.navigation', name = 'navigation-compose', version.ref = 'nav_version' }
+hilt-navigation = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version.ref = 'hilt_navigation' }
+androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines_test_version" }
+
+mockito_core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito_version"}
+mockito_kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito_version"}
+core_testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "core_testing_version"}
+
+
+[bundles]
+ktor = [
+    "ktor-client-android",
+    "ktor-client-core",
+    "ktor-client-cio",
+    "ktor-client-logging",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx",
+    "ktor-client-serialization",
+    "ktor-client-auth",
+    "ktor-client-resources",
+    "jetbrains-kotlinx-serialization"
+]
+
+room = [
+    "room-ktx"
+]
+
+mockito = [
+    "mockito_core",
+    "mockito_kotlin"
+]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
+
